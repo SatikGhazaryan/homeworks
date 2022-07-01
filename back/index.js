@@ -9,7 +9,7 @@ app.use(json)
 app.listen(port, ()=> console.log(`server is listening port ${port}`));
 
 (async () => {
-  await mongoose.connect('mongodb://localhost:27017/project')
+  await mongoose.connect('mongodb://localhost:27017/userproject')
 }
 )()
 
