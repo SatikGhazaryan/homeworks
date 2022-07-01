@@ -17,8 +17,10 @@ async function postContactsController(req,res){
 }
 
 async function deleteContactsController(req,res){
+    console.log("req.body", req.body.id)
     const contact = await contacts.find()
-    contact.forEach((elem)=>{if(elem.age===37){elem.delete()}})
+   
+    contact.forEach((elem)=>{if(elem.id===req.body.id){elem.delete()}})
     
 }
 
